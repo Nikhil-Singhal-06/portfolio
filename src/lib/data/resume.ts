@@ -21,7 +21,7 @@ export const DATA = {
 	location: 'Karlsruhe, Germany',
 	locationLink: '',
 	description:
-		'Robotics Engineer with a passion for automation and advanced robotics solutions. I love tackling complex challenges and building efficient solutions. Always exploring new technologies.',
+		'Robotics Engineer with a passion for automation and computer vision technologies. I love tackling complex challenges and building efficient solutions. Always exploring new technologies.',
 	summary:
 		"I’m currently pursuing my Master's in Computational Sciences while working on advanced robotics projects. I've interned at Intel Labs and contributed to several robotics software solutions that improve automation and operational efficiency. With a background in C++, Python, and ROS, I’m driven by a love for creating innovative systems that enhance performance and solve real-world problems.",
 	avatarUrl: Nikhil,
@@ -30,6 +30,7 @@ export const DATA = {
 		'Moveit2',
 		'Nav2',
 		'C++',
+		'OpenCV',
 		'Svelte',
 		'Docker',
 		'Kubernetes',
