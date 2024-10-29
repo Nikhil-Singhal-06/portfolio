@@ -203,7 +203,6 @@
 						>
 							LinkedIn
 						</a>
-						and I’ll respond whenever I can. I will ignore all soliciting.
 					</p>
 				</div>
 			</BlurFade>
