@@ -7,6 +7,7 @@
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import { DATA } from '$lib/data/resume';
 	import { marked } from 'marked';
+	import Publication from '$lib/imgs/publication.pdf';
 	let BLUR_FADE_DELAY = 0.04;
 </script>
 
@@ -98,6 +99,33 @@
 					/>
 				</BlurFade>
 			{/each}
+		</div>
+	</section>
+	<section id="education">
+		<div class="flex min-h-0 flex-col gap-y-3">
+			<BlurFade delay={BLUR_FADE_DELAY}>
+				<h2 class="text-xl font-bold">Publications</h2>
+			</BlurFade>
+			<p>
+				Mirus F, Pasch F, <span class="font-bold">Singhal N</span>, Scholl K-U (2024) "A generic
+				approach for reactive stateful mitigation of application failures in distributed robotics
+				systems deployed with Kubernetes", In: Computing Research Repository, (CoRR) 2024,
+				<a class="font-bold text-blue-800 underline" href="https://arxiv.org/abs/2410.18825"
+					>[URL]</a
+				>
+				<a class="font-bold text-blue-800 underline" target="_blank" href={Publication}>[PDF]</a>
+			</p>
+			<!-- <BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}> -->
+			<!-- <ResumeCard
+						href={edu.href}
+						logoUrl={edu.logoUrl}
+						company={edu.school}
+						title={edu.school}
+						subtitle={edu.degree}
+						start={edu.start}
+						end={edu.end}
+					/> -->
+			<!-- </BlurFade> -->
 		</div>
 	</section>
 	<section id="skills">
