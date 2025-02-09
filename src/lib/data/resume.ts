@@ -105,10 +105,10 @@ export const DATA = {
 			href: 'https://www.intel.com',
 			badges: [],
 			location: 'Karlsruhe, Germany',
-			title: 'Robotics Software Development Intern',
+			title: 'Robotics Software Development Intern | Master’s Thesis Candidate',
 			logoUrl: IntelLabs,
 			start: 'Jan 2024',
-			end: 'Jul 2024',
+			end: 'Jan 2025',
 			description:
 				'Contributed to the development of an open-source library for scenario execution, improving test automation efficiency by 30%. Developed CI/CD pipelines for robotics software, leading to a 60% increase in deployment efficiency and reducing release time by 40%. Optimized ROS2 application deployments using Kubernetes, reducing on-board resource consumption by 80%.'
 		},
@@ -161,7 +161,7 @@ export const DATA = {
 			title:
 				'Mitigating Application and Communication Failures in Distributed Robotic Manipulation Systems',
 			// href: 'https://example.com',
-			dates: 'Aug 2024 - Present',
+			dates: 'Aug 2024 - Jan 2025',
 			active: true,
 			description:
 				'Developed a failure mitigation system for distributed robotic manipulation systems, leveraging a Kubernetes cluster to enhance fault tolerance and minimize downtime in edge computing environments. Conducted simulations using Gazebo and validated strategies with physical robot arms to analyze the impact of failure mitigation on task performance.',
@@ -173,7 +173,7 @@ export const DATA = {
 			// 		icon: ''
 			// 	}
 			// ],
-			// image: '',
+			image: 'MasterArbeit',
 			video: ''
 		},
 		{
@@ -193,8 +193,8 @@ export const DATA = {
 			// 		icon: ''
 			// 	}
 			// ],
-			// image: '',
-			video: ''
+			image: 'StudienArbeit'
+			// video: ''
 		}
 	],
 	hackathons: [

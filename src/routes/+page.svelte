@@ -93,7 +93,7 @@
 						logoUrl={edu.logoUrl}
 						company={edu.school}
 						title={edu.school}
-						subtitle={edu.degree}
+						description={edu.degree}
 						start={edu.start}
 						end={edu.end}
 					/>

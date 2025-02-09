@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { marked } from 'marked';
 	import Badge from '../ui/badge/badge.svelte';
+	import StudienArbeit from '$lib/imgs/studienarbeit.jpg';
+	import MasterArbeit from '$lib/imgs/masterarbeit.png';
 
 	let _class = '';
 	export { _class as class };
@@ -30,7 +32,25 @@
 				muted
 			></video>
 		{:else if image}
-			<img class="h-40 w-full overflow-hidden object-cover object-top" src={image} alt={title} />
+			{#if image == 'StudienArbeit'}
+				<img
+					class="h-40 w-full overflow-hidden object-cover object-top"
+					src={StudienArbeit}
+					alt={title}
+				/>
+			{:else if image == 'MasterArbeit'}
+				<img
+					class="h-40 w-full overflow-hidden object-cover object-top"
+					src={MasterArbeit}
+					alt={title}
+				/>
+			{:else}
+				<img
+					class="h-40 w-full overflow-hidden object-cover object-top"
+					src={StudienArbeit}
+					alt={title}
+				/>
+			{/if}
 		{:else}
 			<p
 				class="h-40 w-full justify-center overflow-hidden object-cover object-top p-5 text-center text-xl font-bold"
