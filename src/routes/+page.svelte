@@ -49,7 +49,7 @@
 					>
 				</div>
 				<BlurFade delay={BLUR_FADE_DELAY}>
-					<Avatar.Root class="size-28 border">
+					<Avatar.Root class="size-36 border">
 						<Avatar.Image alt={DATA.name} src={DATA.avatarUrl} />
 						<Avatar.Fallback>{DATA.initials}</Avatar.Fallback>
 					</Avatar.Root>
@@ -167,14 +167,12 @@
 					<BlurFade delay={BLUR_FADE_DELAY * 1.5 + id * 0.05}>
 						<ProjectCard
 							heading={project.heading}
-							href={project.href}
 							title={project.title}
 							description={project.description}
 							dates={project.dates}
 							tags={project.technologies}
 							image={project.image}
 							video={project.video}
-							links={project.links}
 						/>
 					</BlurFade>
 				{/each}
