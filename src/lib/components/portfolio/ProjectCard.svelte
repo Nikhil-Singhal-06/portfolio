@@ -3,7 +3,8 @@
 	import Badge from '../ui/badge/badge.svelte';
 	import StudienArbeit from '$lib/imgs/studienarbeit.jpg';
 	import MasterArbeit from '$lib/imgs/masterarbeit.png';
-
+	import Scenario from '$lib/imgs/scenario.png';
+	import HistoDot from '$lib/imgs/histodot.png';
 	let _class = '';
 	export { _class as class };
 	export let heading: string;
@@ -44,6 +45,18 @@
 					src={MasterArbeit}
 					alt={title}
 				/>
+			{:else if image == 'scenario'}
+				<img
+					class="h-80 w-full overflow-hidden object-cover object-top"
+					src={Scenario}
+					alt={title}
+				/>
+			{:else if image == 'histodot'}
+				<img
+					class="h-80 w-full overflow-hidden object-cover object-top"
+					src={HistoDot}
+					alt={title}
+				/>
 			{:else}
 				<img
 					class="h-40 w-full overflow-hidden object-cover object-top"
@@ -65,7 +78,9 @@
 		<div class="space-y-1">
 			<!-- Card Title -->
 			<div class="mt-1 text-base">{title}</div>
-			<time class="font-sans text-xs">{dates}</time>
+			{#if dates}
+				<time class="font-sans text-xs">{dates}</time>
+			{/if}
 			<div class="hidden font-sans text-xs underline print:visible">
 				{link?.replace('https://', '').replace('www.', '').replace('/', '')}
 			</div>

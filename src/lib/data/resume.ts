@@ -197,16 +197,44 @@ export const DATA = {
 			// video: ''
 		}
 	],
-	hackathons: [
+	openSource: [
 		{
-			title: 'Hack Western 5',
-			dates: 'November 23rd - 25th, 2018',
-			location: 'London, Ontario',
+			heading: 'Scenario Execution',
+			title: 'Scenario Execution',
+			// href: 'https://example.com',
+			// dates: 'July 2023 - Dec 2023',
+			// active: false,
 			description:
-				'Developed a mobile application which delivered bedtime stories to children using augmented reality.',
-			image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png',
-			mlh: 'https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg',
-			links: []
+				'Scenario Execution is a modular framework designed to facilitate structured task execution in robotic systems by leveraging high-level scenario description.',
+			technologies: ['ROS2', 'Gazebo', 'Behavior Trees', 'Python', 'C++', 'OpenSCENARIO DSL'],
+			links: [
+				{
+					type: 'GitHub Repository',
+					href: 'https://github.com/IntelLabs/scenario_execution'
+				}
+			],
+			image: 'scenario'
+			// video: ''
+		}
+	],
+	sideProjects: [
+		{
+			heading: 'HistoDot',
+			title: 'HistoDot',
+			// href: 'https://example.com',
+			// dates: 'July 2023 - Dec 2023',
+			// active: false,
+			description:
+				'Histodot revolutionizes interaction with historic buildings by transforming complex point cloud data into intuitive insights and seamlessly integrating with databases.',
+			// technologies: ['ROS2', 'Gazebo', 'Behavior Trees', 'Python', 'C++', 'OpenSCENARIO DSL'],
+			links: [
+				{
+					type: 'Website',
+					href: 'https://www.histodot.com/'
+				}
+			],
+			image: 'histodot'
+			// video: ''
 		}
 	]
 };
