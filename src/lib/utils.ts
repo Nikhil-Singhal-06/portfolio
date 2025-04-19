@@ -81,3 +81,7 @@ export function mdInline(str: string): string {
 	// change **text** ➜ <strong>text</strong>
 	return str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 }
+
+export function isArray(v: unknown): v is unknown[] {
+	return Array.isArray(v);
+}
