@@ -27,7 +27,7 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		paths: { base: dev ? '' : process.env.BASE_PATh },
+		paths: { base: dev ? '' : process.env.BASE_PATH },
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
 				if (path === '/not-found' && referrer === '/blog/how-we-built-out-404-page') {
