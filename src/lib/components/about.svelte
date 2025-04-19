@@ -9,7 +9,7 @@
 >
 	<div class="max-w-prose text-justify leading-relaxed">
 		<p class="mb-4">
-			I’m a <span class="font-semibold">robotics software engineer</span> passionate about building
+			I’m a <span class="font-bold">robotics software engineer</span> passionate about building
 			intelligent systems that blend <span class="font-semibold">computer&nbsp;vision</span>,
 			control, and scalable automation. My work lives at the intersection of embedded systems,
 			distributed architectures, and real‑world robotics.
@@ -19,8 +19,8 @@
 			I recently completed an M.Sc. in Computational Sciences in Engineering at&nbsp;
 			<a
 				class="font-medium {$theme === 'dark'
-					? 'text-slate-300 hover:text-teal-300 focus-visible:text-teal-300'
-					: 'text-slate-900 hover:text-teal-500 focus-visible:text-teal-500'}"
+					? 'text-slate-400 hover:text-teal-300 focus-visible:text-teal-300'
+					: 'text-slate-900 hover:text-sky-600 focus-visible:text-sky-600'}"
 				href="https://www.tu-braunschweig.de"
 				target="_blank"
 				rel="noreferrer noopener"

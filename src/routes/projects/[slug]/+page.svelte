@@ -73,10 +73,10 @@
 								<div class="mb-6 flex flex-wrap gap-2">
 									{#each project.technologies as tech}
 										<span
-											class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 {$theme ===
+											class="flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5 {$theme ===
 											'dark'
-												? 'text-teal-300'
-												: 'text-teal-700'} transition-colors hover:bg-teal-400/20"
+												? 'bg-teal-400/10 text-teal-300'
+												: 'bg-sky-600/10 text-sky-700'} transition-colors hover:bg-teal-400/20"
 										>
 											{tech}
 										</span>
@@ -103,15 +103,24 @@
 									? 'text-slate-200'
 									: 'text-slate-900'} mb-4 flex items-center"
 							>
-								<span class="mr-2 inline-block h-1 w-6 bg-teal-400"></span>
+								<span
+									class="mr-2 inline-block h-1 w-6 {$theme === 'dark'
+										? 'bg-teal-400/10 text-teal-300'
+										: 'bg-sky-600 text-sky-700'}"
+								></span>
 								Project Overview
 							</h2>
-							<p class="mt-4 text-lg">{@html mdInline(project.shortDescription)}</p>
+
 							<!-- Overview bullet points from details -->
 							{#if project.details && project.details.length}
 								{#each project.details.filter((d) => d.heading
 										.toLowerCase()
 										.includes('overview')) as section}
+									{#if section.description}
+										<p class="mt-4 text-lg">{@html mdInline(section.description)}</p>
+									{:else}
+										<p class="mt-4 text-lg">{@html mdInline(project.shortDescription)}</p>
+									{/if}
 									{#if isArray(section.body)}
 										<ul class="mt-4 list-disc space-y-2 pl-5">
 											{#each section.body as line}
@@ -133,7 +142,11 @@
 									? 'text-slate-200'
 									: 'text-slate-900'} mb-4 flex items-center"
 							>
-								<span class="mr-2 inline-block h-1 w-6 bg-teal-400"></span>
+								<span
+									class="mr-2 inline-block h-1 w-6 {$theme === 'dark'
+										? 'bg-teal-400/10 text-teal-300'
+										: 'bg-sky-600 text-sky-700'}"
+								></span>
 								Problem & Motivation
 							</h2>
 
@@ -167,7 +180,11 @@
 									? 'text-slate-200'
 									: 'text-slate-900'} mb-4 flex items-center"
 							>
-								<span class="mr-2 inline-block h-1 w-6 bg-teal-400"></span>
+								<span
+									class="mr-2 inline-block h-1 w-6 {$theme === 'dark'
+										? 'bg-teal-400/10 text-teal-300'
+										: 'bg-sky-600 text-sky-700'}"
+								></span>
 								Challenges & Solutions
 							</h2>
 
@@ -190,13 +207,17 @@
 						</section>
 
 						<!-- Key Takeaways Section -->
-						<section class="{$theme === 'dark' ? 'bg-teal-900/20' : 'bg-teal-50'} rounded-lg p-6">
+						<section class="{$theme === 'dark' ? 'bg-teal-900/20' : 'bg-sky-100'} rounded-lg p-6">
 							<h2
 								class="text-2xl font-bold {$theme === 'dark'
 									? 'text-slate-200'
 									: 'text-slate-900'} mb-4 flex items-center"
 							>
-								<span class="mr-2 inline-block h-1 w-6 bg-teal-400"></span>
+								<span
+									class="mr-2 inline-block h-1 w-6 {$theme === 'dark'
+										? 'bg-teal-400/10 text-teal-300'
+										: 'bg-sky-600 text-sky-700'}"
+								></span>
 								Key Takeaways
 							</h2>
 

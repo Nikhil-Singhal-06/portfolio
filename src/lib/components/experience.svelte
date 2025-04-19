@@ -57,7 +57,7 @@
 										aria-label="{experience.title} at {experience.company} (opens in a new tab)"
 									>
 										<span
-											class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+											class="pointer-events-none absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
 										></span>
 
 										<div>
@@ -73,7 +73,7 @@
 												class="mt-1 inline-flex items-center text-sm font-medium underline {$theme ===
 												'dark'
 													? 'text-slate-400 hover:text-teal-300 focus-visible:text-teal-300'
-													: 'text-slate-600 hover:text-teal-500 focus-visible:text-teal-500'}"
+													: 'text-slate-600 hover:text-sky-600 focus-visible:text-sky-600'}"
 												aria-label="Visit {experience.company} (opens in a new tab)"
 											>
 												{experience.company}
@@ -98,14 +98,14 @@
 								</ul>
 							{/if}
 							<p class="mt-2 text-justify text-sm leading-normal">
-								{experience.description}
+								{@html experience.description}
 							</p>
 							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
 								{#each experience.technologies as tech}
 									<li class="mr-1.5 mt-2">
 										<div
-											class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5
-	{$theme === 'dark' ? 'text-teal-300' : 'text-teal-700'}"
+											class="flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5
+	{$theme === 'dark' ? 'bg-teal-400/10 text-teal-300' : 'bg-sky-600/10 text-sky-700'}"
 										>
 											{tech}
 										</div>

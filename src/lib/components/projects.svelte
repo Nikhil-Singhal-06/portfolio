@@ -41,7 +41,7 @@
 								<a
 									class="inline-flex items-baseline font-medium leading-tight {$theme === 'dark'
 										? 'text-slate-200 hover:text-teal-300 focus-visible:text-teal-300'
-										: 'text-slate-900 hover:text-teal-500 focus-visible:text-teal-500'} group/link text-base"
+										: 'text-slate-900 hover:text-sky-600 focus-visible:text-sky-600'} group/link text-base"
 									href={`/projects/${project.slug}`}
 									rel="noreferrer noopener"
 									aria-label="{project.title} (opens in a new tab)"
@@ -62,39 +62,12 @@
 							<p class="mt-2 text-justify text-sm leading-normal">
 								{project.shortDescription}
 							</p>
-							<!-- {#if project.stats}
-								<a
-									class="relative mt-2 inline-flex items-center text-sm font-medium {$theme ===
-									'dark'
-										? 'text-slate-300 hover:text-teal-300 focus-visible:text-teal-300'
-										: 'text-slate-600 hover:text-teal-500 focus-visible:text-teal-500'}"
-									href={project.stats.url}
-									target="_blank"
-									rel="noreferrer noopener"
-									aria-label="{project.stats.label} (opens in a new tab)"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										class="mr-1 h-4 w-4"
-									>
-										<path
-											d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z"
-										/>
-										<path
-											d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z"
-										/>
-									</svg>
-									<span>{project.stats.label}</span>
-								</a>
-							{/if} -->
 							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">
 								{#each project.technologies as tech}
 									<li class="mr-1.5 mt-2">
 										<div
-											class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5
-	{$theme === 'dark' ? 'text-teal-300' : 'text-teal-700'}"
+											class="flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5
+	{$theme === 'dark' ? 'bg-teal-400/10 text-teal-300' : 'bg-sky-600/10 text-sky-700'}"
 										>
 											{tech}
 										</div>

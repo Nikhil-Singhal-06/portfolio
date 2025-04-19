@@ -41,7 +41,7 @@ export const DATA = {
 				'C++'
 			],
 			description:
-				'Contributed to Scenario Execution, an open‑source library that couples OpenSCENARIO 2 with Behavior Trees for reproducible robotics experiments. Added automated tests and GitHub Actions CI, and built container workflows that offloaded computation to cloud nodes—reducing onboard CPU load.'
+				'Contributed to <a href="https://github.com/IntelLabs/scenario_execution" target="_blank" rel="noopener noreferrer" class="underline text-sky-600 hover:text-sky-700 dark:text-teal-600 dark:hover:text-teal-800">Scenario Execution</a>, an open‑source library that couples OpenSCENARIO 2 with Behavior Trees for reproducible robotics experiments. Added automated tests and GitHub Actions CI, and built container workflows that offloaded computation to cloud nodes—reducing onboard CPU load.'
 		},
 		{
 			title: 'Robotics Research Assistant',
@@ -85,7 +85,7 @@ export const DATA = {
 			slug: 'edge-failure-mitigation',
 			title: 'Fault‑Tolerant Edge Robotics: Stateful Failure‑Mitigation Framework',
 			shortDescription:
-				'Master‑thesis project that designs a reactive, Behavior‑Tree‑driven framework to detect application or communication failures in distributed ROS 2 manipulation / navigation stacks and restore operation in seconds on a Kubernetes edge cluster.',
+				'Reactive, Behavior‑Tree‑driven framework that detects application or communication failures in distributed ROS 2 manipulation / navigation stacks and restores operation on a Kubernetes edge cluster.',
 			technologies: [
 				'ROS 2',
 				'Kubernetes',
@@ -99,15 +99,17 @@ export const DATA = {
 			],
 			details: [
 				{
-					heading: 'Background & Motivation',
+					heading: 'Problem & Motivation',
 					body: 'Modern robots off‑load heavy perception, SLAM and planning to edge servers so they can run richer algorithms without lugging a GPU around. But a single container crash or 5 G dropout can strand a manipulator mid‑task. Cloud‑native fail‑over tools (Kubernetes restarts, rolling updates) are great for stateless web apps; they are too slow and lose context for ROS 2 nodes that hold live map or trajectory state. I set out to give edge‑deployed robots a state‑preserving, real‑time recovery path.'
 				},
 				{
 					heading: 'Project Overview',
+					description:
+						'Designed during my master’s thesis (August 2024 – Jan 2025) at TU Braunschweig & Intel Labs.',
 					body: [
-						'Reactive framework that detects application **or** communication failures and chooses one of four fallback strategies: Restart, Pre‑initialised Pod, Running Stand‑by, Parallel Hot‑Standby.',
-						'Behavior‑Tree monitor generated from OpenSCENARIO 2; triggers recovery only when the active task is affected.',
-						'Validated on a UR‑arm mobile base in Gazebo + real hardware (Nav2 navigation & MoveIt2 manipulation).'
+						'**Reactive framework** that detects application or communication failures and chooses one of four fallback strategies—Restart, Pre‑initialised Pod, Running Stand‑by, or Parallel Hot‑Standby—depending on the task’s real‑time needs.',
+						'Built around a **Behavior‑Tree monitor** generated from OpenSCENARIO 2 task files; it watches ROS 2 topics, pod health and latency thresholds, then triggers recovery only if the current task is affected.',
+						'Validated on a mobile manipulator (arm + base) in Gazebo and on real hardware; workloads include Nav2 navigation and MoveIt 2 manipulation. ​'
 					]
 				},
 				{
@@ -130,6 +132,117 @@ export const DATA = {
 				}
 			],
 			image: 'thesis.webp'
+		},
+		{
+			slug: 'underwater-imu-failure-simulation',
+			title: 'Realistic Failure Scenarios for Underwater IMU Navigation',
+			image: 'imu_underwater.webp',
+			dates: 'July 2023 - Dec 2023',
+			active: false,
+
+			shortDescription:
+				'Time‑based fault‑injection framework that simulates realistic IMU and magnetometer failures inside an underwater ROS/Gazebo environment to stress‑test AUV navigation algorithms.',
+
+			technologies: [
+				'ROS1',
+				'ROS2',
+				'ROS1 Bridge',
+				'Gazebo',
+				'C++',
+				'Docker',
+				'IMU (9‑DOF)',
+				'AUV simulation'
+			],
+
+			details: [
+				{
+					heading: 'Problem & Motivation',
+					body: 'AUVs often rely on a single MEMS IMU + tri‑axial magnetometer to save mass and power. Without redundancy, any drift, bias or outright sensor failure can doom a mission especially under ice where GPS is unavailable. The goal was to inject **realistic failures** into an existing project simulation so researchers can quantify risk before field trials.'
+				},
+
+				{
+					heading: 'Project Overview',
+					description: '',
+					body: [
+						'Integrated a ROS1‑based underwater world with **ROS2** via Docker + `ros1_bridge`, enabling modern ROS2 nodes to drive the legacy simulation without rewriting existing code.',
+						'Implemented a **time‑based fault engine** that injects bias, scale‑factor drift, stuck values, zero‑output, saturation, temperature bias and mis‑alignment on demand.',
+						'Generated clean baseline bags, then replayed faults to compare normal vs. faulty IMU data on a AUV model.'
+					]
+				},
+
+				{
+					heading: 'Challenges & Solutions',
+					body: [
+						'**Bridging old ROS1 world →** containerised the entire stack and used `ros1_bridge` for bidirectional topic mirroring without touching original code.',
+						'**Too many possible faults →** focussed on eight with highest impact (bias, scale, misalignment, temp, stuck, zero, saturation, g‑dependency).',
+						'**Need repeatability →** fault parameters (`type time duration axis value`) loaded from YAML so researchers can toggle scenarios between runs.',
+						'**Capturing ground truth →** recorded ROS 2 bags to correlate sensor error with vehicle drift.'
+					]
+				},
+
+				{
+					heading: 'Key Takeaways',
+					body: [
+						'Time‑based injection mirrors real AUV transients better than single‑frame spikes.',
+						'Docker + bridge let legacy ROS1 sims live on while new ROS2 tooling grows around them—zero refactor.',
+						'Early desktop testing caught orientation blow‑ups long before pool trials, saving hardware time and risk.'
+					]
+				}
+			]
+		},
+		{
+			slug: 'histodot-platform',
+			title: 'HistoDot — Web Platform for Architectural Heritage Data',
+			image: 'histodot.webp',
+			dates: 'Oct 2023 - Present',
+			active: false,
+
+			shortDescription:
+				'Web platform that centralises architectural‑heritage datasets, offering search, metadata editing and in‑browser 3‑D point‑cloud visualisation. Built so researchers and conservators can explore, annotate and share large scans without specialised desktop software.',
+
+			technologies: [
+				'Svelte',
+				'TypeScript',
+				'Node.js',
+				'Tailwind CSS',
+				'PostgreSQL',
+				'Potree (point‑cloud)',
+				'Docker'
+			],
+
+			details: [
+				{
+					heading: 'Problem & Motivation',
+					body: 'Architects and preservation experts juggle gigabytes of scans, photos and CAD files—usually spread across laptops and external drives. I built HistoDot to give them **one browser‑based hub** where they can search, filter and view 3‑D point clouds without hefty desktop software.'
+				},
+
+				{
+					heading: 'Project Overview',
+					body: [
+						'Built with Svelte + TypeScript; REST + WebSocket backend in Node.js.',
+						'Integrated **Potree** so users can load multi‑million‑point LAS files directly in WebGL, measure distances and add annotations.',
+						'Role‑based access control layer for historians vs. public visitors.'
+					]
+				},
+
+				{
+					heading: 'Challenges & Solutions',
+					body: [
+						'**Large dataset performance →** used Postgres partitioning + GIN indexes; complex search queries drop from seconds to <200 ms.',
+						'**Heavy point‑cloud renders →** pregenerated EPT tiles + lazy loading to keep FPS smooth on consumer GPUs.',
+						'**Non‑tech user base →** added inline tool‑tips, keyboard shortcuts and a “tour” modal so first‑time visitors don’t get lost.'
+					]
+				},
+
+				{
+					heading: 'Key Takeaways',
+					body: [
+						'Full‑stack work sharpened my API design and database tuning skills—useful when robotics data starts to scale.',
+						'3‑D web visualisation taught me performance budgeting: every MB and draw call counts.',
+						'Side projects outside robotics keep my front‑end skills fresh and make me a better generalist.'
+					]
+				}
+			]
 		}
 	]
 };
