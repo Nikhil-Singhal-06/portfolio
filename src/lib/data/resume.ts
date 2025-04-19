@@ -142,7 +142,8 @@ export const DATA = {
 			],
 
 			image: 'failure-mitigation-gazebo.webp',
-			additionalImages: ['failure-mitigation-rviz.webp', 'failure-mitigation-real.webp']
+			additionalImages: ['failure-mitigation-rviz.webp', 'failure-mitigation-real.webp'],
+			externalLink: ''
 		},
 		{
 			slug: 'underwater-imu-failure-simulation',
@@ -200,7 +201,8 @@ export const DATA = {
 					]
 				}
 			],
-			additionalImages: ['imu-underwater-rviz.webp']
+			additionalImages: ['imu-underwater-rviz.webp'],
+			externalLink: ''
 		},
 		{
 			slug: 'histodot-platform',
@@ -255,7 +257,8 @@ export const DATA = {
 					]
 				}
 			],
-			additionalImages: ['histodot-project-view.webp', 'histodot-project-view-features.webp']
+			additionalImages: ['histodot-project-view.webp', 'histodot-project-view-features.webp'],
+			externalLink: 'https://www.histodot.com/'
 		}
 	]
 };

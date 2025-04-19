@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { theme } from '$lib/stores/theme';
-	import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-svelte';
 	import { DATA } from '$lib/data/resume';
 	import { isArray, mdInline } from '$lib/utils';
 	import { onMount } from 'svelte';
@@ -142,6 +142,21 @@
 								{/if}
 							</div>
 						{/if}
+						{#if project.externalLink}
+							<a
+								href={project.externalLink}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mb-8 inline-flex items-center rounded-md px-4 py-2 text-sm font-medium {$theme ===
+								'dark'
+									? 'bg-teal-400/10 text-teal-300 hover:bg-teal-400/20'
+									: 'bg-sky-600/10 text-sky-700 hover:bg-sky-600/20'} transition-colors"
+							>
+								Visit Project
+								<ExternalLink size={16} class="ml-2" />
+							</a>
+						{/if}
+
 						<section class="mb-12">
 							<h2
 								class="text-2xl font-bold {$theme === 'dark'
