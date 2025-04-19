@@ -62,7 +62,7 @@
 		<div class="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
 			<div class="lg:py-24">
 				<a
-					href="/#projects"
+					href={`${base}/#projects`}
 					class="group mb-10 inline-flex items-center text-sm font-medium {$theme === 'dark'
 						? 'text-slate-400 hover:text-teal-300'
 						: 'text-slate-600 hover:text-teal-500'} transition-colors"
