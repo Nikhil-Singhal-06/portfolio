@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { theme, toggleTheme } from '$lib/stores/theme';
 	import { activeSection } from '$lib/stores/scroll';
-	import { Github, Linkedin, Codepen, Instagram, Sun, Moon } from 'lucide-svelte';
+	import { Github, Linkedin, Instagram, Sun, Moon } from 'lucide-svelte';
 	import { DATA } from '$lib/data/resume';
 </script>
 
@@ -141,32 +141,6 @@
 							class:text-slate-900={$theme !== 'dark' && $activeSection === 'projects'}
 						>
 							Projects
-						</span>
-					</a>
-				</li>
-				<!-- Add Blog link to navigation -->
-				<li>
-					<a class="group flex items-center py-3" href="/blog">
-						<span
-							class="nav-indicator mr-4 h-px transition-all group-hover:w-16
-		group-focus-visible:w-16 motion-reduce:transition-none"
-							class:w-8={$activeSection !== 'blog'}
-							class:w-16={$activeSection === 'blog'}
-							class:bg-slate-600={$theme === 'dark' && $activeSection !== 'blog'}
-							class:bg-slate-300={!($theme === 'dark') && $activeSection !== 'blog'}
-							class:bg-slate-200={$theme === 'dark' && $activeSection === 'blog'}
-							class:bg-slate-900={!($theme === 'dark') && $activeSection === 'blog'}
-						/>
-						<span
-							class="nav-text text-xs font-bold uppercase tracking-widest"
-							class:group-hover:text-slate-200={$theme === 'dark'}
-							class:group-hover:text-slate-900={$theme !== 'dark'}
-							class:group-focus-visible:text-slate-200={$theme === 'dark'}
-							class:group-focus-visible:text-slate-900={$theme !== 'dark'}
-							class:text-slate-200={$theme === 'dark' && $activeSection === 'blog'}
-							class:text-slate-900={$theme !== 'dark' && $activeSection === 'blog'}
-						>
-							Blog
 						</span>
 					</a>
 				</li>
