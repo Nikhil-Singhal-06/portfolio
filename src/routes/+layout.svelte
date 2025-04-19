@@ -1,7 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import { ModeWatcher, setMode } from 'mode-watcher';
-	setMode('light');
 </script>
 
 <svelte:head>
