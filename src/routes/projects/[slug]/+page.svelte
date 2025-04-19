@@ -5,6 +5,7 @@
 	import { DATA } from '$lib/data/resume';
 	import { isArray, mdInline } from '$lib/utils';
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 
 	let project = DATA.projects.find((p) => p.slug === $page.params.slug);
 	let mousePosition = { x: 0, y: 0 };
@@ -105,7 +106,7 @@
 									: 'border-slate-200'} shadow-lg"
 							>
 								<img
-									src={`/images/${allImages[currentImageIndex]}`}
+									src={`${base}/images/${allImages[currentImageIndex]}`}
 									alt={`${project.title} image ${currentImageIndex + 1}`}
 									class="h-auto w-full object-scale-down transition-transform duration-500"
 								/>

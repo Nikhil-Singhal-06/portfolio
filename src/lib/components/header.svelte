@@ -3,20 +3,20 @@
 	import { activeSection } from '$lib/stores/scroll';
 	import { Github, Linkedin, Instagram, Sun, Moon } from 'lucide-svelte';
 	import { DATA } from '$lib/data/resume';
+	import { base } from '$app/paths';
 </script>
 
 <header
 	class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
 >
 	<div>
-		<!-- Profile section with image -->
 		<div class="mb-4 flex flex-col gap-4">
 			<div
 				class="h-32 w-32 overflow-hidden rounded-full border-2 {$theme === 'dark'
 					? 'border-teal-300/20'
 					: 'border-teal-500/20'}"
 			>
-				<img src="/images/nikhil.webp" alt="Your Name" class="h-full w-full object-cover" />
+				<img src="${base}/images/nikhil.webp" alt="Your Name" class="h-full w-full object-cover" />
 			</div>
 			<div>
 				<h1

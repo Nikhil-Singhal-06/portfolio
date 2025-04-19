@@ -2,6 +2,7 @@
 	import { theme } from '$lib/stores/theme';
 	import { ExternalLink } from 'lucide-svelte';
 	import { DATA } from '$lib/data/resume';
+	import { base } from '$app/paths';
 </script>
 
 <section
@@ -126,7 +127,7 @@
 				'dark'
 					? 'text-slate-200'
 					: 'text-slate-900'} group/link text-base"
-				href="/resume.pdf"
+				href="${base}/resume.pdf"
 				target="_blank"
 				rel="noreferrer noopener"
 				aria-label="View Full Résumé (opens in a new tab)"
