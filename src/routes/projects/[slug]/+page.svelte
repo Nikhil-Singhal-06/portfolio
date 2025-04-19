@@ -162,9 +162,9 @@
 										.toLowerCase()
 										.includes('overview')) as section}
 									{#if section.description}
-										<p class="mt-4 text-lg">{@html mdInline(section.description)}</p>
+										<p class="text-md mt-4">{@html mdInline(section.description)}</p>
 									{:else}
-										<p class="mt-4 text-lg">{@html mdInline(project.shortDescription)}</p>
+										<p class="text-md mt-4">{@html mdInline(project.shortDescription)}</p>
 									{/if}
 									{#if isArray(section.body)}
 										<ul class="mt-4 list-disc space-y-2 pl-5">

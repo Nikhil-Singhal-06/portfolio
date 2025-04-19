@@ -9,10 +9,10 @@
 >
 	<div class="max-w-prose text-justify leading-relaxed">
 		<p class="mb-4">
-			I’m a <span class="font-bold">robotics software engineer</span> passionate about building
-			intelligent systems that blend <span class="font-semibold">computer&nbsp;vision</span>,
-			control, and scalable automation. My work lives at the intersection of embedded systems,
-			distributed architectures, and real‑world robotics.
+			I’m a
+			<span class="font-bold">robotics software engineer</span> passionate about building intelligent
+			systems that blend computer vision, control, and scalable automation. My work sits at the intersection
+			of embedded firmware, distributed edge architectures and real‑world robots.
 		</p>
 
 		<p class="mb-4">
@@ -40,6 +40,6 @@
 			and act with confidence.
 		</p>
 
-		<p>Away from the keyboard I’m usually travelling, reading, or listening to music.</p>
+		<p>Away from the keyboard you’ll find me travelling, reading or discovering new music.</p>
 	</div>
 </section>
