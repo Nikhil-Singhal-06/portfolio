@@ -36,7 +36,7 @@ const config = {
 				throw new Error(message);
 			},
 			crawl: true,
-			entries: dev ? ['*'] : [process.env.BASE_PATH]
+			entries: ['*']
 		}
 	}
 };

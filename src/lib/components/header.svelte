@@ -28,7 +28,7 @@
 						? 'text-slate-200'
 						: 'text-slate-900'} sm:text-5xl"
 				>
-					<a href="/">{DATA.name}</a>
+					<a href={`${base}/`}>{DATA.name}</a>
 				</h1>
 				<h2
 					class="mt-3 text-lg font-medium tracking-tight {$theme === 'dark'
@@ -67,7 +67,7 @@
 				<li>
 					<a
 						class="group flex items-center py-3 {$activeSection === 'about' ? 'active' : ''}"
-						href="#about"
+						href={`${base}/#about`}
 					>
 						<span
 							class="nav-indicator mr-4 h-px transition-all group-hover:w-16
@@ -95,7 +95,7 @@
 				<li>
 					<a
 						class="group flex items-center py-3 {$activeSection === 'experience' ? 'active' : ''}"
-						href="#experience"
+						href={`${base}/#experience`}
 					>
 						<span
 							class="nav-indicator mr-4 h-px transition-all group-hover:w-16
@@ -123,7 +123,7 @@
 				<li>
 					<a
 						class="group flex items-center py-3 {$activeSection === 'projects' ? 'active' : ''}"
-						href="#projects"
+						href={`${base}/#projects`}
 					>
 						<span
 							class="nav-indicator mr-4 h-px transition-all group-hover:w-16

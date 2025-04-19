@@ -16,8 +16,9 @@
 	onMount(() => {
 		// If project not found, redirect to projects list
 		if (!project) {
-			window.location.href = '/#projects';
+			window.location.href = `${base}/#projects`;
 		}
+
 		if (project) {
 			allImages = [project.image, ...(project.additionalImages || [])];
 		}
