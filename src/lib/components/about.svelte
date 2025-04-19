@@ -35,9 +35,9 @@
 
 		<p class="mb-4">
 			Professionally, I have developed perception software, behaviour‑tree testing tools, and
-			large‑scale 3‑D visualisation platforms for both research groups and industry partners. My
-			goal is to build reliable, well‑engineered systems that enable robots to understand their
-			surroundings and act with confidence.
+			large‑scale visualisation platforms for both research groups and industry partners. My goal is
+			to build reliable, well‑engineered systems that enable robots to understand their surroundings
+			and act with confidence.
 		</p>
 
 		<p>Away from the keyboard I’m usually travelling, reading, or listening to music.</p>

@@ -16,6 +16,10 @@ export const DATA = {
 			LinkedIn: {
 				name: 'LinkedIn',
 				url: 'https://www.linkedin.com/in/nikhil-singhal-0612'
+			},
+			Instagram: {
+				name: 'Instagram',
+				url: 'https://www.instagram.com/nikhil_singhal_06?igsh=bXJpZnBpZ3p4bHNy&utm_source=qr'
 			}
 		}
 	},

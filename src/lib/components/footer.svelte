@@ -67,3 +67,14 @@
 		.
 	</p>
 </footer> -->
+<footer class="text-sm text-slate-500">
+	<div class="flex flex-col items-center sm:flex-row sm:justify-between">
+		<div class="text-center text-xs text-slate-400">Built with SvelteKit · Tailwind CSS</div>
+		<div class="flex items-center">
+			<span
+				>© {new Date().getFullYear()}
+				{' '} Nikhil Singhal. All rights reserved.</span
+			>
+		</div>
+	</div>
+</footer>

@@ -176,7 +176,7 @@
 		<li class="mr-5 text-xs">
 			<a
 				class="block {$theme === 'dark' ? 'hover:text-slate-200' : 'hover:text-slate-900'}"
-				href={DATA.contact.social.LinkedIn.url}
+				href={DATA.contact.social.Instagram.url}
 				target="_blank"
 				rel="noreferrer noopener"
 				aria-label="Instagram (opens in a new tab)"
