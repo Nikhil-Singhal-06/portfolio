@@ -127,7 +127,7 @@
 				'dark'
 					? 'text-slate-200'
 					: 'text-slate-900'} group/link text-base"
-				href="${base}/resume.pdf"
+				href="{base}/resume.pdf"
 				target="_blank"
 				rel="noreferrer noopener"
 				aria-label="View Full Résumé (opens in a new tab)"

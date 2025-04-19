@@ -16,7 +16,11 @@
 					? 'border-teal-300/20'
 					: 'border-teal-500/20'}"
 			>
-				<img src="${base}/images/nikhil.webp" alt="Your Name" class="h-full w-full object-cover" />
+				<img
+					src={`${base}/images/nikhil.webp`}
+					alt="Your Name"
+					class="h-full w-full object-cover"
+				/>
 			</div>
 			<div>
 				<h1
