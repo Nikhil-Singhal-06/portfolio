@@ -135,12 +135,13 @@ export const DATA = {
 					]
 				}
 			],
-			image: 'thesis.webp'
+			image: 'failure-mitigation-gazebo.webp',
+			additionalImages: ['failure-mitigation-rviz.webp', 'failure-mitigation-real.webp']
 		},
 		{
 			slug: 'underwater-imu-failure-simulation',
 			title: 'Realistic Failure Scenarios for Underwater IMU Navigation',
-			image: 'imu_underwater.webp',
+			image: 'imu-underwater.webp',
 			dates: 'July 2023 - Dec 2023',
 			active: false,
 
@@ -192,7 +193,8 @@ export const DATA = {
 						'Early desktop testing caught orientation blow‑ups long before pool trials, saving hardware time and risk.'
 					]
 				}
-			]
+			],
+			additionalImages: ['imu-underwater-rviz.webp']
 		},
 		{
 			slug: 'histodot-platform',
@@ -246,7 +248,8 @@ export const DATA = {
 						'Side projects outside robotics keep my front‑end skills fresh and make me a better generalist.'
 					]
 				}
-			]
+			],
+			additionalImages: ['histodot-project-view.webp', 'histodot-project-view-features.webp']
 		}
 	]
 };

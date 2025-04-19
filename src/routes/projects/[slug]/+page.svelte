@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { theme } from '$lib/stores/theme';
-	import { ArrowLeft } from 'lucide-svelte';
+	import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-svelte';
 	import { DATA } from '$lib/data/resume';
 	import { isArray, mdInline } from '$lib/utils';
 	import { onMount } from 'svelte';
@@ -17,7 +17,21 @@
 		if (!project) {
 			window.location.href = '/#projects';
 		}
+		if (project) {
+			allImages = [project.image, ...(project.additionalImages || [])];
+		}
 	});
+
+	let currentImageIndex = 0;
+	let allImages: string[] = [];
+
+	function nextImage() {
+		currentImageIndex = (currentImageIndex + 1) % allImages.length;
+	}
+
+	function prevImage() {
+		currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+	}
 </script>
 
 <svelte:head>
@@ -84,17 +98,48 @@
 								</div>
 							{/if}
 						</header>
-						{#if project.image}
+						{#if allImages && allImages.length}
 							<div
-								class="mb-12 overflow-hidden rounded-xl border-2 {$theme === 'dark'
+								class="relative mb-12 overflow-hidden rounded-xl border-2 {$theme === 'dark'
 									? 'border-slate-800'
-									: 'border-slate-200'} shadow-lg transition-all hover:shadow-xl"
+									: 'border-slate-200'} shadow-lg"
 							>
 								<img
-									src={`/images/${project.image}`}
-									alt={`${project.title} screenshot`}
-									class="aspect-video w-full object-cover transition-transform duration-700 hover:scale-105"
+									src={`/images/${allImages[currentImageIndex]}`}
+									alt={`${project.title} image ${currentImageIndex + 1}`}
+									class="h-auto w-full object-scale-down transition-transform duration-500"
 								/>
+
+								<!-- Navigation arrows -->
+								{#if allImages.length > 1}
+									<button
+										class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white transition-colors hover:bg-black/50"
+										on:click={prevImage}
+										aria-label="Previous image"
+									>
+										<ChevronLeft size={20} />
+									</button>
+									<button
+										class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white transition-colors hover:bg-black/50"
+										on:click={nextImage}
+										aria-label="Next image"
+									>
+										<ChevronRight size={20} />
+									</button>
+
+									<!-- Dots indicator -->
+									<div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 space-x-2">
+										{#each allImages as _, i}
+											<button
+												class="h-2 w-2 rounded-full {i === currentImageIndex
+													? 'bg-white'
+													: 'bg-white/50'} transition-colors"
+												on:click={() => (currentImageIndex = i)}
+												aria-label={`Go to image ${i + 1}`}
+											/>
+										{/each}
+									</div>
+								{/if}
 							</div>
 						{/if}
 						<section class="mb-12">
