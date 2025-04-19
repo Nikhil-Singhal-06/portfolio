@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Nikhil Singhal | Robotics Engineer</title>
+	<title>Nikhil Singhal | Robotics Software Engineer</title>
 	<meta
 		name="description"
 		content="Personal website showcasing my work and experience as a Robotics Engineer."
