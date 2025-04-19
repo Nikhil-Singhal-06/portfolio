@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DATA } from '$lib/data/resume';
+	import { DATA } from '$lib/data/resume_v1';
 	import Dock from '../magic/Dock.svelte';
 	import DockIcon from '../magic/DockIcon.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip';

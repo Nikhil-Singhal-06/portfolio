@@ -1,240 +1,135 @@
-import { CodeIcon, HomeIcon } from 'lucide-svelte';
-// Navbar Icons
-import GithubSvg from '$lib/imgs/github.svg';
-import GithubDarkSvg from '$lib/imgs/github-dark.svg';
-import GmailSvg from '$lib/imgs/gmail.svg';
-import GmailDarkSvg from '$lib/imgs/gmail-dark.svg';
-import LinkedinSvg from '$lib/imgs/linkedin.svg';
-import LinkedinDarkSvg from '$lib/imgs/linkedin-dark.svg';
-import IntelLabs from '$lib/imgs/intel_labs_logo.jpeg';
-import TUBraunschweig from '$lib/imgs/TU-braunschweig.jpeg';
-import NLD from '$lib/imgs/nld.avif';
-import GGSIPU from '$lib/imgs/GGSIU.png';
-import Nikhil from '$lib/imgs/me.jpeg';
-
-// Your resume data
 export const DATA = {
 	name: 'Nikhil Singhal',
-	initials: 'NS',
-	url: 'https://github.com/Nikhil-Singhal-06',
-	img: 'https://i.pinimg.com/736x/9e/dc/a6/9edca66eba199828bda2dbaf35642154.jpg',
 	location: 'Karlsruhe, Germany',
-	locationLink: '',
+	title: 'Robotics Software Engineer',
+	tagline: 'Building intelligent robots that see, learn, and adapt.',
 	description:
-		'Robotics Engineer with a passion for automation and computer vision technologies. I love tackling complex challenges and building efficient solutions. Always exploring new technologies.',
-	summary:
-		"I’m currently pursuing my Master's in Computational Sciences while working on advanced robotics projects. I've interned at Intel Labs and contributed to several robotics software solutions that improve automation and operational efficiency. With a background in C++, Python, and ROS, I’m driven by a love for creating innovative systems that enhance performance and solve real-world problems.",
-	avatarUrl: Nikhil,
-	skills: [
-		'ROS2',
-		'Moveit2',
-		'Nav2',
-		'C++',
-		'OpenCV',
-		'Svelte',
-		'Docker',
-		'Kubernetes',
-		'AWS',
-		'Sveltekit',
-		'Typescript',
-		'Node.js',
-		'Python',
-		'Postgres'
-	],
-	navbar: [
-		{ href: '/', icon: HomeIcon, label: 'Home' },
-		// { href: '/blog', icon: NotebookIcon, label: 'Blog' },
-		{ href: '#', icon: CodeIcon, label: 'Projects' }
-	],
+		'I am driven by the challenge of turning intelligent algorithms into dependable machines. I recently completed an M.Sc. in Computational Sciences in Engineering at the Technical University of Braunschweig, specialising in robotics, computer vision and artificial intelligence through courses such as Robot Control and Optimisation, Pattern Recognition and a hands‑on Robotics Laboratory. In my professional work I have developed perception software, behaviour‑tree testing tools and large‑scale 3‑D visualisation platforms for both research groups and industry partners. My goal is to build reliable, well‑engineered systems that enable robots to understand their surroundings and act with confidence. Away from work I enjoy travelling, reading and listening to classical and jazz music.',
 	contact: {
 		email: 'nikhil2121s@gmail.com',
-		tel: '+49 17671259281',
+		tel: '+49 176‑7125‑9281',
 		social: {
 			GitHub: {
 				name: 'GitHub',
-				url: 'https://github.com/Nikhil-Singhal-06',
-				// // icon: Icons.github,
-				icon: GithubSvg,
-				navbar: true,
-				dark_icon: GithubDarkSvg
+				url: 'https://github.com/nikhil-singhal-06'
 			},
 			LinkedIn: {
 				name: 'LinkedIn',
-				url: 'https://www.linkedin.com/in/nikhil-singhal-0612/',
-				// // icon: Icons.linkedin,
-				icon: LinkedinSvg,
-				navbar: true,
-				dark_icon: LinkedinDarkSvg
-			},
-			// X: {
-			// 	name: 'X',
-			// 	url: 'https://twitter.com/Sikandar_Bhide',
-			// 	// // icon: Icons.x,
-			// 	icon: TwitterSvg,
-			// 	navbar: true,
-			// 	dark_icon: TwitterDarkSvg
-			// },
-			// PeerList: {
-			// 	name: 'PeerList',
-			// 	url: 'https://peerlist.io/bhide',
-			// 	// // icon: Icons.x,
-			// 	icon: PeerListSvg,
-			// 	navbar: true,
-			// 	dark_icon: PeerListDarkSvg
-			// },
-			// Youtube: {
-			// 	name: 'Youtube',
-			// 	url: 'https://github.com/SikandarJODD',
-			// 	// // icon: Icons.youtube,
-			// 	icon: Youtube,
-			// 	navbar: true
-			// },
-			email: {
-				name: 'Send Email',
-				url: '#',
-				// // icon: Icons.email,
-				icon: GmailSvg,
-				navbar: false,
-				dark_icon: GmailDarkSvg
+				url: 'https://www.linkedin.com/in/nikhil-singhal-0612'
 			}
 		}
 	},
-	work: [
+	experience: [
 		{
+			title: 'Robotics Software Engineer',
 			company: 'Intel Labs',
-			href: 'https://www.intel.com',
-			badges: [],
+			companyUrl: 'https://www.intel.com/research',
+			badges: ['Internship', 'Master‑Thesis'],
 			location: 'Karlsruhe, Germany',
-			title: 'Robotics Software Development Intern | Master’s Thesis Candidate',
-			logoUrl: IntelLabs,
-			start: 'Jan 2024',
-			end: 'Jan 2025',
+			period: 'Jan 2024 – Jan 2025',
+			start: '2024-01',
+			end: '2025-01',
+			technologies: [
+				'ROS2',
+				'OpenSCENARIO',
+				'Behavior Trees',
+				'Container Orchestration',
+				'GitHub Actions',
+				'MoveIt2',
+				'Nav2',
+				'Python',
+				'C++'
+			],
 			description:
-				'Contributed to the development of an open-source library for scenario execution, improving test automation efficiency by 30%. Developed CI/CD pipelines for robotics software, leading to a 60% increase in deployment efficiency and reducing release time by 40%. Optimized ROS2 application deployments using Kubernetes, reducing on-board resource consumption by 80%.'
+				'Contributed to Scenario Execution, an open‑source library that couples OpenSCENARIO 2 with Behavior Trees for reproducible robotics experiments. Added automated tests and GitHub Actions CI, and built container workflows that offloaded computation to cloud nodes—reducing onboard CPU load.'
 		},
 		{
-			company: 'Institute of Mobile Machines and Commercial Vehicles',
-			href: 'https://www.tu-braunschweig.de/imm',
-			badges: [],
+			title: 'Robotics Research Assistant',
+			company: 'Institute of Mobile Machines & Commercial Vehicles, TU Braunschweig',
+			companyUrl: 'https://www.tu-braunschweig.de/iam',
+			badges: ['Research'],
 			location: 'Braunschweig, Germany',
-			title: 'Student Research Assistant',
-			logoUrl: TUBraunschweig,
-			start: 'Mar 2023',
-			end: 'Dec 2023',
+			period: 'Mar 2023 – Dec 2023',
+			start: '2023-03',
+			end: '2023-12',
+			technologies: ['ROS2', 'Python', 'C++', '5G', 'GPS RTK'],
 			description:
-				'Integrated ROS2 for seamless communication across devices, boosting operational efficiency by 70%. Developed ROS nodes for real-time GPS data acquisition, enhancing localization and navigation accuracy by 40%. Applied advanced C++ and Python skills to improve robotic software solutions.'
+				'Developed ROS 2 nodes for sensor processing and control. Implemented high‑bandwidth data transfer over 5 G between robots and edge servers, and integrated real‑time GPS streams for centimeter‑level positioning during field trials.'
 		},
 		{
+			title: 'Full‑Stack Developer',
 			company: 'Lower Saxony State Office for Monument Preservation',
-			href: 'https://denkmalpflege.niedersachsen.de/startseite/',
-			badges: [],
+			companyUrl: 'https://denkmalpflege.niedersachsen.de',
+			badges: ['Working Student'],
 			location: 'Hannover, Germany',
-			title: 'Working Student',
-			logoUrl: NLD,
-			start: 'Feb 2022',
-			end: 'Feb 2023',
+			period: 'Feb 2022 – Feb 2023',
+			start: '2022-02',
+			end: '2023-02',
+			technologies: ['React', 'Node.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Potree'],
 			description:
-				'Developed a web-based database application using Node.js, significantly improving data management processes. Optimized query response times by 30% through advanced PostgreSQL techniques. Enhanced a Point Cloud application, improving data visualization and processing capabilities.'
+				'Engineered a React/Node.js platform that manages and visualises giga‑scale LiDAR point clouds of historic buildings. Integrated Potree for in‑browser 3‑D rendering and tuned Postgres with indexing & partitioning to accelerate spatial queries.'
 		}
 	],
 	education: [
 		{
 			school: 'Technical University of Braunschweig',
 			href: 'https://www.tu-braunschweig.de',
-			degree: "Master's Degree in Computational Sciences in Engineering",
-			logoUrl: TUBraunschweig,
-			start: '2021',
-			end: 'Present'
-		},
-		{
-			school: 'Guru Gobind Singh Indraprastha University',
-			href: 'http://www.ipu.ac.in/',
-			degree: "Bachelor's Degree in Mechanical Engineering",
-			logoUrl: GGSIPU,
-			start: '2017',
-			end: '2021'
+			degree: 'M.Sc. Computational Sciences in Engineering',
+			period: '2025',
+			start: '2022-04',
+			end: '2025-03'
 		}
 	],
 	projects: [
 		{
-			heading: "Master's Thesis",
-			title:
-				'Mitigating Application and Communication Failures in Distributed Robotic Manipulation Systems',
-			// href: 'https://example.com',
-			dates: 'Aug 2024 - Jan 2025',
-			active: true,
-			description:
-				'Developed a failure mitigation system for distributed robotic manipulation systems, leveraging a Kubernetes cluster to enhance fault tolerance and minimize downtime in edge computing environments. Conducted simulations using Gazebo and validated strategies with physical robot arms to analyze the impact of failure mitigation on task performance.',
-			technologies: ['Kubernetes', 'ROS2', 'Gazebo', 'Docker', 'Python', 'C++'],
-			// links: [
-			// 	{
-			// 		type: 'Research Paper',
-			// 		href: 'https://example.com',
-			// 		icon: ''
-			// 	}
-			// ],
-			image: 'MasterArbeit',
-			video: ''
-		},
-		{
-			heading: 'Student Project',
-			title:
-				'Development of Realistic Failure Scenarios for Navigation Sensors in an Underwater Simulation Environment',
-			// href: 'https://example.com',
-			dates: 'July 2023 - Dec 2023',
-			active: false,
-			description:
-				'Simulated realistic failure scenarios for IMUs using ROS and Gazebo, improving simulation accuracy and system robustness. Created a Docker-based solution to bridge communication between ROS1 and ROS2, enabling seamless platform transitions and interoperability.',
-			technologies: ['ROS1', 'ROS2', 'Gazebo', 'Docker', 'Python', 'C++'],
-			// links: [
-			// 	{
-			// 		type: 'GitHub Repository',
-			// 		href: 'https://github.com/open-source-repo-link',
-			// 		icon: ''
-			// 	}
-			// ],
-			image: 'StudienArbeit'
-			// video: ''
-		}
-	],
-	openSource: [
-		{
-			heading: 'Scenario Execution',
-			title: 'Scenario Execution',
-			// href: 'https://example.com',
-			// dates: 'July 2023 - Dec 2023',
-			// active: false,
-			description:
-				'Scenario Execution is a modular framework designed to facilitate structured task execution in robotic systems by leveraging high-level scenario description.',
-			technologies: ['ROS2', 'Gazebo', 'Behavior Trees', 'Python', 'C++', 'OpenSCENARIO DSL'],
-			links: [
+			slug: 'edge-failure-mitigation',
+			title: 'Fault‑Tolerant Edge Robotics: Stateful Failure‑Mitigation Framework',
+			shortDescription:
+				'Master‑thesis project that designs a reactive, Behavior‑Tree‑driven framework to detect application or communication failures in distributed ROS 2 manipulation / navigation stacks and restore operation in seconds on a Kubernetes edge cluster.',
+			technologies: [
+				'ROS 2',
+				'Kubernetes',
+				'Behavior Trees',
+				'OpenSCENARIO 2',
+				'Gazebo',
+				'MoveIt 2',
+				'Nav2',
+				'Prometheus',
+				'Docker'
+			],
+			details: [
 				{
-					type: 'GitHub Repository',
-					href: 'https://github.com/IntelLabs/scenario_execution'
+					heading: 'Background & Motivation',
+					body: 'Modern robots off‑load heavy perception, SLAM and planning to edge servers so they can run richer algorithms without lugging a GPU around. But a single container crash or 5 G dropout can strand a manipulator mid‑task. Cloud‑native fail‑over tools (Kubernetes restarts, rolling updates) are great for stateless web apps; they are too slow and lose context for ROS 2 nodes that hold live map or trajectory state. I set out to give edge‑deployed robots a state‑preserving, real‑time recovery path.'
+				},
+				{
+					heading: 'Project Overview',
+					body: [
+						'Reactive framework that detects application **or** communication failures and chooses one of four fallback strategies: Restart, Pre‑initialised Pod, Running Stand‑by, Parallel Hot‑Standby.',
+						'Behavior‑Tree monitor generated from OpenSCENARIO 2; triggers recovery only when the active task is affected.',
+						'Validated on a UR‑arm mobile base in Gazebo + real hardware (Nav2 navigation & MoveIt2 manipulation).'
+					]
+				},
+				{
+					heading: 'Challenges & Solutions',
+					body: [
+						'**State loss on pod restart →** built a Task‑Proxy that re‑publishes the last goal pose after recovery.',
+						'**False alarms from generic health probes →** wrote a BT monitor that checks task context before declaring failure.',
+						'**Flexible standby strategies →** designed a YAML policy layer so operators can switch between Restart, Warm Stand‑by, Running Stand‑by, and Hot‑Standby at runtime without code changes.',
+						'**Evaluating real‑time impact →** used ROS 2 bag recordings together with cAdvisor metrics to trace detection, spin‑up, and hand‑over events for each strategy.'
+					]
+				},
+				{
+					heading: 'Key Takeaways',
+					body: [
+						'**Warm standby strikes the best balance —** keeping a pre‑initialised pod ready means recovery is quick without a noticeable hit to normal CPU usage.',
+						'**Hot‑standby is instantaneous but expensive —** running a parallel replica ensures seamless takeover, yet the extra compute load makes sense only for safety‑critical robots.',
+						'**Task‑aware monitoring prevents false alarms —** checking whether a task is actually active before triggering recovery avoids unnecessary restarts and log noise.',
+						'**Behavior Trees put recovery logic where it belongs —** they let you describe the mission, the monitoring rules, and the fail‑over actions in the same declarative file, keeping everything easy to audit and extend.'
+					]
 				}
 			],
-			image: 'scenario'
-			// video: ''
-		}
-	],
-	sideProjects: [
-		{
-			heading: 'HistoDot',
-			title: 'HistoDot',
-			// href: 'https://example.com',
-			// dates: 'July 2023 - Dec 2023',
-			// active: false,
-			description:
-				'Histodot revolutionizes interaction with historic buildings by transforming complex point cloud data into intuitive insights and seamlessly integrating with databases.',
-			// technologies: ['ROS2', 'Gazebo', 'Behavior Trees', 'Python', 'C++', 'OpenSCENARIO DSL'],
-			links: [
-				{
-					type: 'Website',
-					href: 'https://www.histodot.com/'
-				}
-			],
-			image: 'histodot'
-			// video: ''
+			image: 'thesis.webp'
 		}
 	]
 };

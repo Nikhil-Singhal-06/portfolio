@@ -1,14 +1,15 @@
-<script>
-	import Navbar from '$lib/components/portfolio/Navbar.svelte';
+<script lang="ts">
 	import '../app.css';
 	import { ModeWatcher, setMode } from 'mode-watcher';
-	setMode('dark');
+	setMode('light');
 </script>
 
-<ModeWatcher />
-<div
-	class="relative mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24"
->
-	<slot></slot>
-	<Navbar />
-</div>
+<svelte:head>
+	<title>Nikhil Singhal | Robotics Engineer</title>
+	<meta
+		name="description"
+		content="Personal website showcasing my work and experience as a Robotics Engineer."
+	/>
+</svelte:head>
+
+<slot />
