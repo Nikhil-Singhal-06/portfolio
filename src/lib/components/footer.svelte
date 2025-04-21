@@ -15,7 +15,7 @@
 				aria-label="Svelte (opens in a new tab)"
 			>
 				SvelteKit
-			</a>{' '}
+			</a>{' and '}
 			<a
 				href="https://tailwindcss.com/"
 				class="font-medium {$theme === 'dark'

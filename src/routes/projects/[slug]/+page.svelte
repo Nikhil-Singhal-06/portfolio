@@ -102,17 +102,17 @@
 						</header>
 						{#if allImages && allImages.length}
 							<div
-								class="relative mb-12 overflow-hidden rounded-xl border-2 {$theme === 'dark'
+								class="relative overflow-hidden rounded-xl border-2 shadow-lg {$theme === 'dark'
 									? 'border-slate-800'
-									: 'border-slate-200'} shadow-lg"
+									: 'border-slate-200'}"
+								style="height: 600px;"
 							>
 								<img
 									src={`${base}/images/${allImages[currentImageIndex]}`}
 									alt={`${project.title} image ${currentImageIndex + 1}`}
-									class="h-auto w-full object-scale-down transition-transform duration-500"
+									class="mt-0 h-full w-full transition-transform duration-500"
 								/>
 
-								<!-- Navigation arrows -->
 								{#if allImages.length > 1}
 									<button
 										class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white transition-colors hover:bg-black/50"
@@ -128,8 +128,6 @@
 									>
 										<ChevronRight size={20} />
 									</button>
-
-									<!-- Dots indicator -->
 									<div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 space-x-2">
 										{#each allImages as _, i}
 											<button

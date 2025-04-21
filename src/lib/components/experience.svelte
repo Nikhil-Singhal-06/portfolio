@@ -71,10 +71,9 @@
 											</div>
 
 											<p
-												class="mt-1 inline-flex items-center text-sm font-medium underline {$theme ===
-												'dark'
-													? 'text-slate-400 hover:text-teal-300 focus-visible:text-teal-300'
-													: 'text-slate-600 hover:text-sky-600 focus-visible:text-sky-600'}"
+												class="mt-1 inline-flex items-center text-sm font-medium {$theme === 'dark'
+													? 'text-slate-400  focus-visible:text-teal-300'
+													: 'text-slate-600  focus-visible:text-sky-600'}"
 												aria-label="Visit {experience.company} (opens in a new tab)"
 											>
 												{experience.company}

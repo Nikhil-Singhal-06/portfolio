@@ -149,7 +149,7 @@
 					</a>
 				</li>
 				<li>
-					<a class="group flex items-center py-3" href={`${base}/blog/`}>
+					<a class="group flex items-center py-3" href={`${base}/#blog`}>
 						<span
 							class="nav-indicator mr-4 h-px transition-all group-hover:w-16
 		group-focus-visible:w-16 motion-reduce:transition-none"

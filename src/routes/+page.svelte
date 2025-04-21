@@ -8,6 +8,7 @@
 	import Experience from '$lib/components/experience.svelte';
 	import Projects from '$lib/components/projects.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import Blog from '$lib/components/blog.svelte';
 
 	let mousePosition = { x: 0, y: 0 };
 
@@ -16,7 +17,7 @@
 	}
 
 	function handleScroll() {
-		updateActiveSection(['about', 'experience', 'projects']);
+		updateActiveSection(['about', 'experience', 'projects', 'blog']);
 	}
 
 	onMount(() => {
@@ -38,14 +39,10 @@
 >
 	<div class="group/spotlight relative">
 		<div
-			class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute {$theme ===
-			'dark'
-				? 'opacity-100'
-				: 'opacity-30'}"
-			style="background: radial-gradient(600px at {mousePosition.x}px {mousePosition.y}px, {$theme ===
-			'dark'
-				? 'rgba(100, 116, 139, 0.2)'
-				: 'rgba(56, 189, 248, 0.15)'}, transparent 80%);"
+			class="pointer-events-none fixed inset-0 z-30 transition duration-300
+		{$theme === 'dark' ? 'opacity-100' : 'opacity-30'}"
+			style="background: radial-gradient(600px at {mousePosition.x}px {mousePosition.y}px,
+		{$theme === 'dark' ? 'rgba(136, 146, 176, 0.15)' : 'rgba(56, 189, 248, 0.15)'}, transparent 80%);"
 		/>
 		<div
 			class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
@@ -56,6 +53,7 @@
 					<About />
 					<Experience />
 					<Projects />
+					<Blog />
 					<Footer />
 				</main>
 			</div>

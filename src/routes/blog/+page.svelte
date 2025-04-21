@@ -11,27 +11,21 @@
 	function handleMouseMove(e: MouseEvent) {
 		mousePosition = { x: e.clientX, y: e.clientY };
 	}
-
-	console.log(data);
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="{$theme === 'dark' ? 'bg-slate-900' : 'bg-white'} leading-relaxed {$theme === 'dark'
+	class=" leading-relaxed {$theme === 'dark'
 		? 'text-slate-400'
 		: 'text-slate-600'} min-h-screen antialiased transition-colors duration-300 selection:bg-teal-300 selection:text-teal-900"
 	on:mousemove={handleMouseMove}
 >
 	<div class="group/spotlight relative">
 		<div
-			class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute {$theme ===
-			'dark'
-				? 'opacity-100'
-				: 'opacity-30'}"
-			style="background: radial-gradient(600px at {mousePosition.x}px {mousePosition.y}px, {$theme ===
-			'dark'
-				? 'rgba(29, 78, 216, 0.15)'
-				: 'rgba(56, 189, 248, 0.15)'}, transparent 80%);"
+			class="pointer-events-none fixed inset-0 z-30 transition duration-300
+		{$theme === 'dark' ? 'opacity-100' : 'opacity-30'}"
+			style="background: radial-gradient(600px at {mousePosition.x}px {mousePosition.y}px,
+		{$theme === 'dark' ? 'rgba(136, 146, 176, 0.15)' : 'rgba(56, 189, 248, 0.15)'}, transparent 80%);"
 		/>
 
 		<div class="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">

@@ -9,6 +9,7 @@ tags:
 published: true
 toc:
   [
+    { id: 'intro', label: '📘 Intro' },
     { id: 'native-install', label: '🧪 Native Install' },
     { id: 'virtual-machines', label: '🖥 Virtual Machines' },
     { id: 'docker', label: '🐳 Docker' },
@@ -19,6 +20,8 @@ minutesRead: 6
 ---
 
 ### 👋 Intro: It Started With “Let Me Just Install ROS2…
+
+<a id="intro"></a>
 
 I’ve been working in robotics for a while, mostly on Linux machines, but after recently switching full-time to a MacBook with an M2 chip, I figured I’d set up a quick ROS2 + Gazebo environment and get to work.
 
