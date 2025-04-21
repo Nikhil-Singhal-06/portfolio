@@ -16,14 +16,14 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:site_name" content={title} />
-	<meta property="og:image" content={`${url}/${base}/${post.image}`} />
+	<meta property="og:image" content={`${url}/${base}/blogs/${post.image}`} />
 
 	<meta name="twitter:site" content="@McBride1105" />
 	<meta name="twitter:creator" content="@McBride1105" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image:src" content={`${url}/${base}/${post.image}`} />
+	<meta name="twitter:image:src" content={`${url}/${base}/blogs/${post.image}`} />
 	<meta name="twitter:widgets:new-embed-design" content="on" />
 
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
@@ -40,7 +40,7 @@
 		<div class="aspect-video w-full overflow-hidden">
 			{#if post.image}
 				<img
-					src={`${base}/${post.image}`}
+					src={`${base}/blogs/${post.image}`}
 					alt={post.title}
 					class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 				/>

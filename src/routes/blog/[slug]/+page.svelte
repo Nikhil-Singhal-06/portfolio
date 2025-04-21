@@ -89,7 +89,7 @@
 
 		<div class="relative mb-8">
 			<img
-				src={`${base}/${data.meta.image}`}
+				src={`${base}/blogs/${data.meta.image}`}
 				alt={data.meta.title}
 				class="h-auto max-h-[600px] w-full rounded-xl object-cover shadow-md"
 			/>
