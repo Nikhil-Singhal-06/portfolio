@@ -54,18 +54,18 @@
 	<meta name="description" content={data.meta.description} />
 
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content={`${fullUrl}`} />
+	<meta property="og:url" content={`${url}/${base}/blogs/${data.meta.image}`} />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
 	<meta property="og:site_name" content={title} />
-	<meta property="og:image" content={data.meta.image} />
+	<meta property="og:image" content={`${url}/${base}`} />
 
 	<meta name="twitter:site" content="@YouTwitterHandle" />
 	<meta name="twitter:creator" content="@YouTwitterHandle" />
 	<meta name="twitter:title" content={data.meta.title} />
 	<meta name="twitter:description" content={data.meta.description} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image:src" content={data.meta.image} />
+	<meta name="twitter:image:src" content={`${url}/${base}/blogs/${data.meta.image}`} />
 	<meta name="twitter:widgets:new-embed-design" content="on" />
 
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />

@@ -2,7 +2,7 @@
 title: "Running ROS2 on Apple Silicon: Native, Docker, or VM? Here's What Actually Works"
 description: 'A hands-on breakdown of how to run ROS 2 on Apple Silicon Macs - including native installs, Docker, VMs, and the workaround that finally made RViz and Gazebo run reliably.'
 date: '2025-04-21'
-image: '/blogs/ros2-apple-silicon-thumbnail.webp'
+image: ros2-apple-silicon-thumbnail.webp
 tags:
   - ROS2
   - MacOs
