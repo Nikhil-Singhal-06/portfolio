@@ -49,11 +49,11 @@
 	<meta name="description" content={data.meta.description} />
 
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content={`${url}/${base}/blogs/${data.meta.image}`} />
+	<meta property="og:url" content={`${fullUrl}`} />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
 	<meta property="og:site_name" content={title} />
-	<meta property="og:image" content={`${url}/${base}`} />
+	<meta property="og:image" content={`${url}/${base}/blogs/${data.meta.image}`} />
 
 	<meta name="twitter:site" content="@YouTwitterHandle" />
 	<meta name="twitter:creator" content="@YouTwitterHandle" />
