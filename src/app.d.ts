@@ -8,6 +8,22 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	interface toc {
+		id: string;
+		lable: string;
+	}
+	interface Post {
+		title: string;
+		slug: string;
+		description: string;
+		image?: string;
+		date: string;
+		tags: string[];
+		published: boolean;
+		toc: toc[];
+		minutesRead: int;
+	}
 }
 
 export {};
