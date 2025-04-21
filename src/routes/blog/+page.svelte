@@ -37,13 +37,13 @@
 		<div class="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
 			<div class="lg:py-24">
 				<a
-					href={`${base}/#projects`}
+					href={`${base}/`}
 					class="group mb-10 inline-flex items-center text-sm font-medium {$theme === 'dark'
 						? 'text-slate-400 hover:text-teal-300'
-						: 'text-slate-600 hover:text-teal-500'} transition-colors"
+						: 'text-slate-600 hover:text-sky-500'} transition-colors"
 				>
 					<ArrowLeft size={16} class="mr-2 transition-transform group-hover:-translate-x-1" />
-					Back to Projects
+					Back to Profile
 				</a>
 				<h1
 					class="text-3xl font-bold {$theme === 'dark' ? 'text-slate-200' : 'text-slate-900'} mb-8"

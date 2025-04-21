@@ -54,7 +54,7 @@
 			<h2
 				class="text-lg font-semibold {$theme === 'dark'
 					? 'text-slate-200 group-hover:text-teal-300'
-					: 'text-slate-900 group-hover:text-teal-500'} transition-colors"
+					: 'text-slate-900 group-hover:text-sky-500'} transition-colors"
 			>
 				{post.title}
 			</h2>

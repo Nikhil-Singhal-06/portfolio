@@ -66,7 +66,7 @@
 					href={`${base}/#projects`}
 					class="group mb-10 inline-flex items-center text-sm font-medium {$theme === 'dark'
 						? 'text-slate-400 hover:text-teal-300'
-						: 'text-slate-600 hover:text-teal-500'} transition-colors"
+						: 'text-slate-600 hover:text-sky-500'} transition-colors"
 				>
 					<ArrowLeft size={16} class="mr-2 transition-transform group-hover:-translate-x-1" />
 					Back to Projects

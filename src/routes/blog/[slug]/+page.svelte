@@ -5,6 +5,8 @@
 	import { ArrowLeft } from 'lucide-svelte';
 	import { theme } from '$lib/stores/theme';
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
+
 	export let data;
 
 	const fullUrl = `${url}/${base}/blog/${page.params.slug}`;
@@ -38,6 +40,10 @@
 			alert('Link copied to clipboard!');
 		});
 	}
+
+	onMount(() => {
+		theme.set('light');
+	});
 </script>
 
 <!-- SEO -->
@@ -72,12 +78,12 @@
 			href={`${base}/blog/`}
 			class="group mb-10 inline-flex items-center text-sm font-medium {$theme === 'dark'
 				? 'text-slate-400 hover:text-teal-300'
-				: 'text-slate-600 hover:text-teal-500'} transition-colors"
+				: 'text-slate-600 hover:text-sky-500'} transition-colors"
 		>
 			<ArrowLeft size={16} class="mr-2 transition-transform group-hover:-translate-x-1" />
 			Back to Blogs
 		</a>
-		<h1 class="mb-4 text-3xl font-bold text-black">
+		<h1 class="t mb-4 text-3xl font-bold {$theme === 'dark' ? 'text-slate-200 ' : 'text-black '}">
 			{data.meta.title}
 		</h1>
 
@@ -126,7 +132,7 @@
 								<li>
 									<a
 										href={`#${item.id}`}
-										class="block border-l-2 border-transparent pl-3 text-gray-700 transition-all hover:border-teal-500 hover:text-teal-700"
+										class="block border-l-2 border-transparent pl-3 text-gray-700 transition-all hover:border-sky-500 hover:text-sky-700"
 									>
 										{item.label}
 									</a>
@@ -175,7 +181,7 @@
 							>
 						</button> -->
 						<button
-							class="rounded-full bg-gray-100 p-2 text-gray-600 transition-colors hover:bg-teal-100 hover:text-teal-700"
+							class="rounded-full bg-gray-100 p-2 text-gray-600 transition-colors hover:bg-sky-100 hover:text-sky-700"
 							on:click={shareLinkedIn}
 						>
 							<svg
@@ -195,7 +201,7 @@
 							>
 						</button>
 						<button
-							class="rounded-full bg-gray-100 p-2 text-gray-600 transition-colors hover:bg-teal-100 hover:text-teal-700"
+							class="rounded-full bg-gray-100 p-2 text-gray-600 transition-colors hover:bg-sky-100 hover:text-sky-700"
 							on:click={copyLink}
 						>
 							<svg
