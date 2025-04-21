@@ -4,21 +4,7 @@
 	import { ExternalLink } from 'lucide-svelte';
 	import { base } from '$app/paths';
 
-	let latestPost: Post;
-
-	onMount(async () => {
-		try {
-			const res = await fetch(`${base}/api/posts`);
-			const posts = await res.json();
-			if (posts && posts.length > 0) {
-				posts.sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime());
-				latestPost = posts[0];
-				console.log(latestPost);
-			}
-		} catch (err) {
-			console.error('Failed to fetch latest blog post:', err);
-		}
-	});
+	export let latestPost: Post;
 </script>
 
 <section

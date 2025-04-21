@@ -9,8 +9,11 @@
 	import Projects from '$lib/components/projects.svelte';
 	import Footer from '$lib/components/footer.svelte';
 	import Blog from '$lib/components/blog.svelte';
+	import { base } from '$app/paths';
 
 	let mousePosition = { x: 0, y: 0 };
+
+	let latestPost: Post;
 
 	function handleMouseMove(e: MouseEvent) {
 		mousePosition = getMousePosition(e);
@@ -21,9 +24,26 @@
 	}
 
 	onMount(() => {
+		const fetchLatestPost = async () => {
+			try {
+				const res = await fetch(`${base}/api/posts`);
+				const posts = await res.json();
+				if (posts && posts.length > 0) {
+					posts.sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime());
+					latestPost = posts[0];
+					console.log(latestPost);
+				}
+			} catch (err) {
+				console.error('Failed to fetch latest blog post:', err);
+			}
+		};
+
+		fetchLatestPost();
+
 		window.addEventListener('scroll', handleScroll);
 		window.addEventListener('mousemove', handleMouseMove);
 		handleScroll();
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 			window.removeEventListener('mousemove', handleMouseMove);
@@ -53,7 +73,7 @@
 					<About />
 					<Experience />
 					<Projects />
-					<Blog />
+					<Blog {latestPost} />
 					<Footer />
 				</main>
 			</div>
