@@ -8,7 +8,7 @@
 
 	onMount(async () => {
 		try {
-			const res = await fetch('/api/posts');
+			const res = await fetch(`${base}/api/posts`);
 			const posts = await res.json();
 			if (posts && posts.length > 0) {
 				posts.sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -97,18 +97,6 @@
 							<p class="mt-2 text-justify text-sm leading-normal">
 								{latestPost.description}
 							</p>
-							<ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">
-								<!-- {#each project.technologies as tech}
-									<li class="mr-1.5 mt-2">
-										<div
-											class="flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5
-	{$theme === 'dark' ? 'bg-teal-400/10 text-teal-300' : 'bg-sky-600/10 text-sky-700'}"
-										>
-											{tech}
-										</div>
-									</li>
-								{/each} -->
-							</ul>
 						</div>
 						<img
 							alt="{latestPost.title} screenshot"
