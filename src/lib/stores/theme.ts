@@ -5,7 +5,7 @@ type Theme = 'dark' | 'light';
 
 // Initialize from localStorage if available
 const userTheme = browser && localStorage.getItem('theme');
-const initialTheme = userTheme ? (userTheme as Theme) : 'dark';
+const initialTheme = userTheme ? (userTheme as Theme) : 'light';
 
 export const theme = writable<Theme>(initialTheme);
 
