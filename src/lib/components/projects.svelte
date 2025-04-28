@@ -81,11 +81,17 @@
 							src={`${base}/images/${project.image}`}
 							width="200"
 							height="48"
-							class="aspect-video rounded border-2 object-cover {$theme === 'dark'
-								? 'border-slate-200/10'
-								: 'border-slate-200/50'} transition {$theme === 'dark'
-								? 'group-hover:border-slate-200/30'
-								: 'group-hover:border-slate-300'} sm:order-1 sm:col-span-3 sm:translate-y-1"
+							class={`aspect-video rounded border-2 object-cover ${
+								$theme === 'dark' ? 'border-slate-200/10' : 'border-slate-200/50'
+							} transition ${
+								$theme === 'dark'
+									? 'group-hover:border-slate-200/30'
+									: 'group-hover:border-slate-300'
+							} sm:order-1 sm:col-span-3 sm:translate-y-1`}
+							srcSet={`${base}/images/${project.image.replace('.webp', '-588.webp')} 588w, 
+           ${base}/images/${project.image.replace('.webp', '-1024.webp')} 1024w, 
+           ${base}/images/${project.image.replace('.webp', '-160.webp')} 160w`}
+							sizes="(min-width: 1360px) 146px, (min-width: 1040px) calc(12vw - 15px), (min-width: 860px) 196px, (min-width: 640px) 22.5vw, 196px"
 						/>
 					</div>
 				</li>

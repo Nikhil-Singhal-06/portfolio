@@ -31,7 +31,6 @@
 				if (posts && posts.length > 0) {
 					posts.sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime());
 					latestPost = posts[0];
-					console.log(latestPost);
 				}
 			} catch (err) {
 				console.error('Failed to fetch latest blog post:', err);

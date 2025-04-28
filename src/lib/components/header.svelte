@@ -17,9 +17,13 @@
 					: 'border-teal-500/20'}"
 			>
 				<img
+					alt="Nikhil Singhal"
 					src={`${base}/images/nikhil.webp`}
-					alt="Your Name"
 					class="h-full w-full object-cover"
+					srcSet={`${base}/images/nikhil_372.webp 372w, 
+           ${base}/images/nikhil_600.webp 600w, 
+           ${base}/images/nikhil_1200.webp 1200w`}
+					sizes="124px"
 				/>
 			</div>
 			<div>

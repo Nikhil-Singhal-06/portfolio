@@ -96,8 +96,12 @@
 						{$theme === 'dark' ? 'bg-slate-800 text-slate-300' : 'bg-white/90 text-gray-600'}"
 				>
 					<img
-						src={`${base}/images/nikhil.webp`}
 						alt="Nikhil Singhal"
+						src={`${base}/images/nikhil.webp`}
+						srcSet={`${base}/images/nikhil_372.webp 372w, 
+           ${base}/images/nikhil_600.webp 600w, 
+           ${base}/images/nikhil_1200.webp 1200w`}
+						sizes="36px"
 						class="h-10 w-10 rounded-full border-2 border-white shadow-sm"
 					/>
 					<div class="flex flex-col">
