@@ -32,7 +32,7 @@
 						? 'text-slate-200'
 						: 'text-slate-900'} sm:text-5xl"
 				>
-					<a aria-hidden="true" href={`${base}/`}>{DATA.name}</a>
+					<a href={`${base}/`}>{DATA.name}</a>
 				</h1>
 				<h2
 					class="mt-3 text-lg font-medium tracking-tight {$theme === 'dark'
@@ -50,7 +50,6 @@
 
 		<div class="mt-8">
 			<button
-				aria-hidden="true"
 				on:click={toggleTheme}
 				class="rounded-md p-2 {$theme === 'dark'
 					? 'bg-slate-800 text-slate-200 hover:bg-slate-700'
@@ -190,7 +189,6 @@
 				target="_blank"
 				rel="noreferrer noopener"
 				aria-label="GitHub (opens in a new tab)"
-				aria-hidden="true"
 			>
 				<span class="sr-only">GitHub</span>
 				<Github size={24} />
@@ -203,7 +201,6 @@
 				target="_blank"
 				rel="noreferrer noopener"
 				aria-label="LinkedIn (opens in a new tab)"
-				aria-hidden="true"
 			>
 				<span class="sr-only">LinkedIn</span>
 				<Linkedin size={24} />
@@ -216,7 +213,6 @@
 				target="_blank"
 				rel="noreferrer noopener"
 				aria-label="Instagram (opens in a new tab)"
-				aria-hidden="true"
 			>
 				<span class="sr-only">Instagram</span>
 				<Instagram size={24} />

@@ -54,7 +54,6 @@
 	class="leading-relax antialiased transition-colors duration-300 selection:bg-teal-300 selection:text-teal-900"
 	on:mousemove={handleMouseMove}
 	role="presentation"
-	aria-hidden="true"
 >
 	<div class="group/spotlight relative">
 		<div
