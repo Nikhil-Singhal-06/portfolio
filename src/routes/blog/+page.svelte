@@ -19,6 +19,7 @@
 		? 'text-slate-400'
 		: 'text-slate-600'} min-h-screen antialiased transition-colors duration-300 selection:bg-teal-300 selection:text-teal-900"
 	on:mousemove={handleMouseMove}
+	aria-hidden="true"
 >
 	<div class="group/spotlight relative">
 		<div
