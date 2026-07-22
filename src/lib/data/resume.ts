@@ -10,11 +10,11 @@ export const DATA = {
 		social: {
 			GitHub: {
 				name: 'GitHub',
-				url: 'https://github.com/nikhil-singhal-06'
+				url: 'https://github.com/singhalnik'
 			},
 			LinkedIn: {
 				name: 'LinkedIn',
-				url: 'https://www.linkedin.com/in/nikhil-singhal-0612'
+				url: 'https://www.linkedin.com/in/singhalnik'
 			},
 			Instagram: {
 				name: 'Instagram',

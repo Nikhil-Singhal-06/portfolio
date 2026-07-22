@@ -228,7 +228,7 @@ FSMs and BTs both have valid, powerful roles in robot behavior design, but they 
 
 ### Flowchart: Picking an Architecture
 
-<img src="https://nikhil-singhal-06.github.io/portfolio/blogs/fsm-bt-decision-flowchart.jpg" alt="FSM vs BT Decision Flowchart" width="500">
+<img src="https://singhalnik.github.io/portfolio/blogs/fsm-bt-decision-flowchart.jpg" alt="FSM vs BT Decision Flowchart" width="500">
 
 <p style="text-align: center; font-style: italic;">
   A decision flowchart to help match your robot’s task profile to the right architecture.
