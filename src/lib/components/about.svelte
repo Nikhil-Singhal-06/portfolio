@@ -10,13 +10,14 @@
 	<div class="max-w-prose text-justify leading-relaxed">
 		<p class="mb-4">
 			I’m a
-			<span class="font-bold">robotics software engineer</span> passionate about building intelligent
-			systems that blend computer vision, control, and scalable automation. My work sits at the intersection
-			of embedded firmware, distributed edge architectures and real‑world robots.
+			<span class="font-bold">computer vision &amp; robotics software engineer</span> who builds perception
+			systems that let robots see and act in the real world. My work centres on 6‑DOF pose estimation,
+			deep‑learning and classical vision pipelines, and the distributed, scalable software that runs
+			them in production.
 		</p>
 
 		<p class="mb-4">
-			I recently completed an M.Sc. in Computational Sciences in Engineering at&nbsp;
+			I hold an M.Sc. in Computational Sciences in Engineering from&nbsp;
 			<a
 				class="font-medium {$theme === 'dark'
 					? 'text-slate-400 hover:text-teal-300 focus-visible:text-teal-300'
@@ -25,19 +26,20 @@
 				target="_blank"
 				rel="noreferrer noopener"
 			>
-				Technical University of Braunschweig,
+				Technical University of Braunschweig,
 			</a>
 			specialising in robotics, computer vision, and artificial intelligence. Core courses included
-			<span class="italic">Robot Control & Optimisation</span>,
+			<span class="italic">Robot Control &amp; Optimisation</span>,
 			<span class="italic">Pattern Recognition</span>, and a hands‑on
-			<span class="italic">Robotics Laboratory</span>.
+			<span class="italic">Robotics Laboratory</span>. Alongside my studies I researched
+			fault‑tolerant edge robotics at Intel Labs, co‑authoring a preprint on stateful failure
+			recovery for distributed ROS 2 systems.
 		</p>
 
 		<p class="mb-4">
-			Professionally, I have developed perception software, behaviour‑tree testing tools, and
-			large‑scale visualisation platforms for both research groups and industry partners. My goal is
-			to build reliable, well‑engineered systems that enable robots to understand their surroundings
-			and act with confidence.
+			Across research groups and industry, I’ve built perception software, behaviour‑tree testing
+			tools, and large‑scale 3D visualisation platforms. My goal is to engineer reliable systems
+			that let robots understand their surroundings and act with confidence.
 		</p>
 
 		<p>Away from the keyboard you’ll find me travelling, reading or discovering new music.</p>

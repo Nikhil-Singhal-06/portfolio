@@ -1,9 +1,10 @@
 export const DATA = {
 	name: 'Nikhil Singhal',
-	location: 'Karlsruhe, Germany',
-	title: 'Robotics Software Engineer',
+	location: 'Paderborn, Germany',
+	title: 'Computer Vision & Robotics Software Engineer',
 	tagline: 'Building intelligent robots that see, learn, and adapt.',
-	description: '',
+	description:
+		'Computer vision engineer specializing in production perception, 6-DOF pose estimation, instance segmentation, and sim-to-real transfer.',
 	contact: {
 		email: 'nikhil2121s@gmail.com',
 		tel: '+49 176-7125-9281',
@@ -24,6 +25,31 @@ export const DATA = {
 	},
 	experience: [
 		{
+			title: 'Computer Vision & Robotics Software Engineer',
+			company: 'Unchained Robotics GmbH',
+			companyUrl: 'https://www.unchainedrobotics.de',
+			badges: ['Full-Time'],
+			location: 'Paderborn, Germany',
+			period: 'Aug 2025 – Present',
+			start: '2025-08',
+			end: 'Present',
+			technologies: [
+				'Python',
+				'PyTorch',
+				'OpenCV',
+				'DETR',
+				'Instance Segmentation',
+				'6-DOF Pose Estimation',
+				'Intel RealSense',
+				'Isaac Sim',
+				'Hand-Eye Calibration',
+				'gRPC',
+				'FastAPI'
+			],
+			description:
+				'Own end-to-end development of deep-learning and classical perception pipelines for 6-DOF pose estimation of mixed, occluded items, using industrial 3D cameras and a DETR-based instance-segmentation model selected for its occlusion handling. Built the classical OpenCV pipeline from scratch on Intel RealSense RGB-D data, including eye-in-hand and eye-to-hand calibration, reaching pose accuracy within 5 mm and 1° in continuous 24/7 production. Generate physics-based synthetic data in Isaac Sim for sim-to-real transfer, and enhanced the core Python framework acting as the software PLC for robotic-cell orchestration.'
+		},
+		{
 			title: 'Robotics Software Engineer',
 			company: 'Intel Labs',
 			companyUrl: 'https://www.intel.com/research',
@@ -36,6 +62,7 @@ export const DATA = {
 				'ROS2',
 				'OpenSCENARIO',
 				'Behavior Trees',
+				'Kubernetes',
 				'Container Orchestration',
 				'GitHub Actions',
 				'MoveIt2',
@@ -44,7 +71,7 @@ export const DATA = {
 				'C++'
 			],
 			description:
-				'Contributed to <a href="https://github.com/IntelLabs/scenario_execution" target="_blank" rel="noopener noreferrer" class="underline text-sky-600 hover:text-sky-700 dark:text-teal-600 dark:hover:text-teal-800">Scenario Execution</a>, an open-source library that couples OpenSCENARIO 2 with Behavior Trees for reproducible robotics experiments. Added automated tests and GitHub Actions CI, and built container workflows that offloaded computation to cloud nodes, reducing onboard CPU load.'
+				'Contributed to <a href="https://github.com/IntelLabs/scenario_execution" target="_blank" rel="noopener noreferrer" class="underline text-sky-600 hover:text-sky-700 dark:text-teal-600 dark:hover:text-teal-800">Scenario Execution</a>, an open-source library that couples OpenSCENARIO 2 with Behavior Trees for reproducible robotics experiments. Added automated tests and GitHub Actions CI, and built Kubernetes-based container workflows that offloaded computation to remote nodes, cutting onboard resource usage by 80%. For my master thesis, designed a fault-tolerance framework enabling a mobile manipulation system to recover statefully from mid-task failures in around 1.5 seconds.'
 		},
 		{
 			title: 'Robotics Research Assistant',
@@ -55,9 +82,9 @@ export const DATA = {
 			period: 'Mar 2023 - Dec 2023',
 			start: '2023-03',
 			end: '2023-12',
-			technologies: ['ROS2', 'Python', 'C++', '5G', 'GPS RTK'],
+			technologies: ['ROS2', 'Python', 'C++', '5G', 'GPS'],
 			description:
-				'Developed ROS 2 nodes for sensor processing and control. Implemented high-bandwidth data transfer over 5G network between robots and edge servers, and integrated real-time GPS streams for precise positioning information during field trials.'
+				'Built a ROS 2 framework for sensor-data exchange across a multi-machine system (drone, ground robot, edge, cloud), using image-chunking to reliably transfer large captures over a 5G network, and configured multi-machine ROS 2 discovery. Integrated real-time GPS streams for precise positioning during field trials.'
 		},
 		{
 			title: 'Full-Stack Developer',
@@ -81,6 +108,18 @@ export const DATA = {
 			period: '2025',
 			start: '2022-04',
 			end: '2025-03'
+		}
+	],
+	publications: [
+		{
+			venue: 'Preprint',
+			venueFull: 'arXiv / Computing Research Repository (CoRR)',
+			title:
+				'A Generic Approach for Reactive Stateful Mitigation of Application Failures in Distributed Robotics Systems Deployed with Kubernetes',
+			authors: 'F. Mirus, F. Pasch, N. Singhal, K.-U. Scholl',
+			year: 2024,
+			url: 'https://arxiv.org/abs/2410.18825',
+			relatedProject: 'edge-failure-mitigation'
 		}
 	],
 	projects: [
@@ -143,7 +182,7 @@ export const DATA = {
 
 			image: 'failure-mitigation-gazebo.webp',
 			additionalImages: ['failure-mitigation-rviz.webp', 'failure-mitigation-real.webp'],
-			externalLink: ''
+			externalLink: 'https://arxiv.org/abs/2410.18825'
 		},
 		{
 			slug: 'underwater-imu-failure-simulation',
